@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>n Body Simulation</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<style>
+	body {
+		font-family: "Lato", sans-serif;
+	}
+
+	.sidenav {
+	  height: 100%;
+		width: 7%;
+	  position: fixed;
+		z-index: 1;
+	  top: 0;
+		left: 0;
+	  background-color: #1E88E5;
+		overflow-x: hidden;
+	  padding-top: 20px;
+	}
+
+
+
+
+
+	@media screen and (max-height: 450px) {
+		.sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+	button, form {
+		width: 100%;
+		height: 40px;
+		transition-duration: 0.4s;
+		border: 2px;
+		color: #455A64;
+	}
+	.button:hover, form:hover {
+		 background-color: #1E88E5;
+		 color: white;
+	}
+	</style>
+</head>
+<body >
+  <div class="sidenav">
+		<form>
+		<input type="file" id="csvFileInput" onchange="handleSimFiles(this.files)" accept=".csv">
+		</form>
+		<button id="reset">Reset</button>
+		<button id="zoomIn">++</button>
+		<button id="zoomOut">--</button>
+		<button id="zoomInLittle">+</button>
+		<button id="zoomOutLittle">-</button>
+		<button id="scaleA">View</button>
+  </div>
+	<div class="main" id="visual" style="width:100%; height:100%;"></div>
+
+  <!-- Le javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
